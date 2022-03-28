@@ -1,18 +1,22 @@
 <div class="login">
   <div class="container">
-    <div class="form">
-
     <h1>Sign up</h1>
 
     <%= form_for(@user) do |f| %>
-      <%= f.text_field :first_name, :placeholder => "First name" %>
-      <%= f.text_field :last_name, :placeholder => "Last name" %>
-      <%= f.email_field :email, :placeholder => "Email" %>
-      <%= f.password_field :password, :placeholder => "Password" %>
+      <div class="form-outline mb-4">
+        <%= f.text_field :first_name, :placeholder => "First name" %>
+      </div>
+      <div class="form-outline mb-4">
+        <%= f.text_field :last_name, :placeholder => "Last name" %>
+      </div>
+      <div class="form-outline mb-4">
+        <%= f.email_field :email, :placeholder => "Email" %>
+      </div>
+      <div class="form-outline mb-4">
+        <%= f.password_field :password, :placeholder => "Password" %>
+      </div>
       <%= f.submit "Create an account", class: "btn-submit" %>
     <% end %>
 
-
-    </div>
   </div>
 </div>

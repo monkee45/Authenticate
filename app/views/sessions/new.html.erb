@@ -1,15 +1,18 @@
 <div class="login">
 	<div class="container">
-		<div class="form">
-
-      <h1>Log in</h1>
-
-      <%= form_for(:session, url: login_path) do |f| %>
-      <%= f.email_field :email, :placeholder => "Email" %>
-      <%= f.password_field :password, :placeholder => "Password" %>
-      <%= f.submit "Log in", class: "btn-submit" %>
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
 
-    </div>
+      <h1>Log in</h1>
+        <%= form_for(:session, url: login_path) do |f| %>
+          <div class="form-outline mb-4">
+            <%= f.email_field :email, :placeholder => "Email" %>
+          </div>
+          <div class="form-outline mb-4">
+            <%= f.password_field :password, :placeholder => "Password" %>
+          </div>
+          <%= f.submit "Log in", class: "btn-submit" %>
+        <% end %>
 	</div>
 </div>

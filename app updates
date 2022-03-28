@@ -1,0 +1,31 @@
+application.html.erb
+
+        <%= link_to root_path do %>
+          <img src="/assets/sec.svg" width="80" height="80"> 
+        <% end %>
+
+
+                <img src="/assets/sec.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"> 
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <%= link_to root_path do %>
+                <img src="/assets/sec.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"> 
+              <% end %>
+            </a>
+            <% if current_user %>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><%= current_user.email %></li>
+                <li class="nav-item"><%= link_to "Log out", logout_path, :method => :delete %>
+                </li>
+              </ul>
+            <% else %>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><%= link_to "Login", 'login' %></a></li>
+              <li class="nav-item"><%= link_to "Signup", 'signup' %></a></li>
+              </ul>
+            <% end %>
+           </div>
+        </nav>
