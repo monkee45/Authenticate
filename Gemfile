@@ -23,7 +23,7 @@ gem 'jbuilder'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc'
 
-gem 'puma'
+gem 'puma', '~>5.6.4'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
