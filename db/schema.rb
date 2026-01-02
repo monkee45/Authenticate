@@ -10,29 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2015_11_09_214344) do
+ActiveRecord::Schema[8.1].define(version: 2015_11_09_214344) do
   create_table "albums", force: :cascade do |t|
-    t.string "title"
-    t.string "image"
     t.datetime "created_at", precision: nil
+    t.string "image"
+    t.string "title"
     t.datetime "updated_at", precision: nil
   end
 
   create_table "photos", force: :cascade do |t|
-    t.text "caption"
-    t.string "image"
     t.integer "album_id"
+    t.text "caption"
     t.datetime "created_at", precision: nil
+    t.string "image"
     t.datetime "updated_at", precision: nil
   end
 
   create_table "users", force: :cascade do |t|
+    t.datetime "created_at", precision: nil
+    t.string "email"
     t.string "first_name"
     t.string "last_name"
-    t.string "email"
     t.string "password_digest"
-    t.datetime "created_at", precision: nil
     t.datetime "updated_at", precision: nil
   end
-
 end

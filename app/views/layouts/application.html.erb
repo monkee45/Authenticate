@@ -22,7 +22,9 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <% if current_user %>
                     <li class="nav-item nav-link" aria-current="page"><%= current_user.email %></li>
-                    <li class="nav-item nav-link" aria-current="page"><%= link_to "Log out", logout_path, :method => :delete %></li>
+                    <li class="nav-item nav-link" aria-current="page">
+                    <%= link_to "Log out", logout_path, :method => :get %>
+                    </li>
                 <% else %>
                     <li class="nav-item nav-link" aria-current="page"><%= link_to "Login", 'login' %></li>
                     <li class="nav-item nav-link"><%= link_to "Signup", 'signup' %></li>
