@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.0.2'
+gem 'rails', '~> 8.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -23,7 +23,7 @@ gem 'jbuilder'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc'
 
-gem 'puma', '~>5.6.4'
+gem 'puma', '~>7.0'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
@@ -38,7 +38,16 @@ gem 'bcrypt'
 # gem 'debugger', group: [:development, :test]
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin]
+gem 'tzinfo-data', platforms: [:windows]
 
 gem 'jsbundling-rails'
 gem 'cssbundling-rails'
+
+group :test do
+    # Adds support for Capybara system testing and selenium driver
+    gem 'capybara'
+    gem 'selenium-webdriver'
+    # Easy installation and use of web drivers to run system tests with browsers
+    gem 'webdrivers'
+  end
+  
